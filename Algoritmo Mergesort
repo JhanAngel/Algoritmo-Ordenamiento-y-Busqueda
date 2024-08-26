@@ -40,5 +40,5 @@ public class Algoritmos{
         for(int k=0;k<arreglo.length;k++) {
            System.out.print(arreglo[k]+" ");
         }
-    }
-}
+     }
+      }
