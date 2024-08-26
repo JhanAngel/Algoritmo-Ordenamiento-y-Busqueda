@@ -12,6 +12,7 @@ public class Algoritmos{
         int primero=0;
         int ultimo=arreglo.length-1;
 
+
         // metodo Quicksort
         for (int p=primero;p<=ultimo;p++){
             int pivote=arreglo[(primero+ultimo)/2];
