@@ -1,1 +1,69 @@
+package Packet;
+import java.util.Scanner;
 
+public class Algoritmos{
+
+   public static void main(String[] args){
+     Scanner entrada=new Scanner(System.in);
+              
+        int Elementos=7; 
+        int arreglo[]=new int[Elementos];  
+        
+        System.out.println("Introduce valores a ordenar: ");
+        for (int i=0;i<Elementos;i++){
+            arreglo[i]=entrada.nextInt();
+        }
+        int primero=0;
+        int ultimo=arreglo.length-1;
+
+        // metodo Quicksort
+        for (int p=primero;p<=ultimo;p++){
+            int pivote=arreglo[(primero+ultimo)/2];
+            int i=primero;
+            int j=ultimo;
+            int auxiliar;
+
+            // se ordena y parte la mitad
+            for (; i<=j;){
+                for (; arreglo[i]<pivote;i++);
+                for (; arreglo[j]>pivote;j--);
+                if (i <=j){
+                    auxiliar=arreglo[i];
+                    arreglo[i]=arreglo[j];
+                    arreglo[j]=auxiliar;
+                    i++;
+                    j--;
+                }
+                }
+            //se ordena la primera fila
+            if (primero<j){
+                for(int k =primero;k<=j;k++){
+                    for(int l=k+1;l<=j;l++){
+                        if(arreglo[k]>arreglo[l]){
+                           auxiliar= arreglo[k];
+                          arreglo[k]=arreglo[l];
+                           arreglo[l] =auxiliar;
+                       }
+                    }
+                    }
+            }           
+            
+            // ordenamiento de la segunda fila
+             if (i<ultimo){           
+            for(int m=i; m<=ultimo;m++)     {
+                  for (int n=m+1;n<=ultimo; n++){
+                       if(arreglo[m]> arreglo[n])   {
+                            auxiliar=arreglo[m];
+                          arreglo[m]= arreglo[n];
+                            arreglo[n] =auxiliar;
+                        }           }
+                }
+        
+       }
+        }
+        System.out.println("Arreglo ordenado: ");
+        for (int k=0;k<arreglo.length;k++){
+            System.out.print(arreglo[k]+ " ");
+    }
+   }
+}
