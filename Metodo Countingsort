@@ -1,0 +1,36 @@
+public class Algoritmos {
+
+    public static void main(String[] args){
+        int[] arreglo = {76,10,8,26,1,34,66,55,23,223,102,342,11,48,99,71,13};
+
+        // Encontrar el valor maximo del arreglo
+        int max=arreglo[0];
+        for(int i = 1; i<arreglo.length;i++){
+            if(arreglo[i]>max){
+              max=arreglo[i];
+        }
+        }
+        // Inicializa el conteo
+        int[] conteo=new int[max+1];
+        for(int i=0; i<conteo.length;i++){
+           conteo[i]=0;
+        }
+
+        // Contar las ocurrencias de cada valor
+        for (int i = 0; i < arreglo.length; i++){
+            conteo[arreglo[i]]++;
+       }      
+        int posicion=0;
+        for(int i=0;i<conteo.length;i++){
+           while (conteo[i] > 0) {
+            arreglo[posicion++]=i;
+              conteo[i]--;
+           }
+        }
+        System.out.println("Arreglo ordenado:");
+        for(int k = 0; k<arreglo.length;k++) {
+           System.out.print(arreglo[k] + " ");
+     }
+}
+}
+
