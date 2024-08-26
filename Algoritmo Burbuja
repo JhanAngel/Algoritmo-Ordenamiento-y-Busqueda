@@ -1,1 +1,47 @@
+// METODO BURBUJA
+
+package Packet;
+import java.util.Scanner;
+
+public class Algoritmos {
+
+    public static void main(String[] args) {
+      Scanner entrada = new Scanner(System.in);
+        
+        int Elementos=7;  //defino el tamaño del arreglo
+        int arreglo[]=new int[Elementos];  // le doy el tamaño segun el valor de elementos al arreglo
+        int intercambio;
+        
+        
+        for (int i= 0;i<Elementos;i++) {  // le doy al programa le numero de ciclo a dar
+            System.out.println("Numero valorico del arreglo " + (i + 1) + ": ");
+            arreglo[i]= entrada.nextInt();
+        }
+        
+        //Metodo burbuja
+        for (int i=0; i<(Elementos-1); i++) { // Cantidad de vueltas a darr, no hace falta dar la vuelta final
+        	for(int j=0;j<(Elementos -1); j++ ) {
+        		if(arreglo[j] > arreglo[j+1]) { // Si el numero actual es mayor al siguiente intercarmbia valors
+        		intercambio = arreglo[j];
+        		
+        		arreglo[j] = arreglo [j+1]; //Al valor actual le agregamo el valor del numero siguiente
+        		arreglo [j+1]= intercambio; // Al valor del numero sigueinte le agregamos el valor del numero actual que estaba en intercambio
+        		
+        		      		
+        		}      		
+        	}       	
+     
+        }
+               
+        System.out.println("Arreglo de forma creciente: ");
+        for(int i =0;i<Elementos;i++) {
+        	System.out.println(arreglo[i] + " - ");
+        	
+        	
+        }
+        
+        
+        
+    }
+}
 
