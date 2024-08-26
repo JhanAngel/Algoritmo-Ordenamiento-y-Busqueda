@@ -35,7 +35,7 @@ public class Algoritmos{
                     j--;
                 }
                 }
-            //se ordena la primera fila
+            //ordenamiento de primera fila
             if (primero<j){
                 for(int k =primero;k<=j;k++){
                     for(int l=k+1;l<=j;l++){
@@ -48,7 +48,7 @@ public class Algoritmos{
                     }
             }           
             
-            // ordenamiento de la segunda fila
+            // ordenamiento de segunda fila
              if (i<ultimo){           
             for(int m=i; m<=ultimo;m++)     {
                   for (int n=m+1;n<=ultimo; n++){
