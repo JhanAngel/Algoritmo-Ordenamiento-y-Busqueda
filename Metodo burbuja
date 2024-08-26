@@ -1,0 +1,33 @@
+
+package Packet;
+import java.util.Scanner;
+
+public class Algoritmos{
+
+    public static void main(String[] args){
+      Scanner entrada = new Scanner(System.in);
+        
+        int Elementos=17;
+        int[] arreglo = {76,10,8,26,1,34,66,55,23,223,102,342,11,48,99,71,13};
+        
+     int aux;
+        
+        //Metodo burbuja
+        for (int i=0; i<(Elementos-1); i++){ 
+        	for(int j=0;j<(Elementos -1); j++ ){
+        		if(arreglo[j]>arreglo[j+1]){ 
+        		aux= arreglo[j];
+        		
+        		arreglo[j]=arreglo [j+1]; 
+        		arreglo [j+1]= aux; 
+        		      		
+        		}      		
+        	}         
+        }
+               
+        System.out.println("Arreglo ordenado: ");
+        for(int i =0;i<Elementos;i++) {
+        	System.out.println(arreglo[i] + " ");
+}
+    }
+}
