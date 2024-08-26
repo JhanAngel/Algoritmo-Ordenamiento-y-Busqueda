@@ -1,6 +1,25 @@
+package Packet;
+
+import java.util.Scanner;
+
 public class Algoritmo {
 
-
-    public static void main
-    pu
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        
+        int Elementos = 7;  // Se define el tamaño del arreglo
+        int arreglo[] = new int[Elementos];  // Inicialización del arreglo con el tamaño definido
+        
+        for (int i = 0; i < Elementos; i++) {  // Iterar sobre el tamaño del arreglo
+            System.out.println("Numero valorico del arreglo " + (i + 1) + ": ");
+            arreglo[i] = entrada.nextInt();
+        }
+        
+        //Metodo burbuja
+        
+        
+        
+        
+        
+    }
 }
